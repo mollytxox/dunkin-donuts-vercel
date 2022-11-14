@@ -1,0 +1,2019 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Dunkin Sans', sans-serif;
+}
+// turns off horizontal scrolling
+body,
+html {
+  // max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+$dunkin-orange: #EE6B37;
+$dunkin-pink: #ED91AD;
+$dunkin-yellow: #FAD49F;
+
+
+// SMALL MOBILE MEDIA QUERY----------------------------------
+// @media only screen and (max-width: 768px) {
+
+
+  a:hover {
+    color: $dunkin-orange!important;
+  }
+
+  .bg-light {
+    background-color: #FFD49F!important;
+    opacity: 60%;
+    border-bottom: 3px solid #AD0064;
+  }
+
+  #logo {
+    width: 120px;
+    height: 70px;
+    margin-left: 10px;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: $dunkin-pink;
+    border: 2px solid $dunkin-orange;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.15s ease-in-out;
+    margin-right: 10px;
+  }
+
+  #orderbutton {
+    color: #EA3D07;
+    border: 2px solid #EA3D07;
+    background-color: #FFBD6B;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #CA0878;
+    width: 150px;
+    height: 45px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 75px;
+    margin-right: 30px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: 5px;
+  }
+
+  .navbar-nav {
+    border-top: 3px solid $dunkin-pink;
+  }
+
+  /* HERO SECTION */
+  #hero-section {
+    background-image: url("../img/hero-image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 135px;
+    width: 100%;
+  }
+
+  #hero-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    color: #FAE0F2;
+    text-shadow: 2px 2px 2px #da3f90;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  // MODALS ---------------------
+  #description-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    // opacity: 90;
+    opacity: 0;
+    // visibility: visible;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  #description-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #description-modal-content {
+    // opacity: 0;
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #description-modal-content.active {
+    opacity: 1;
+  }
+
+  #description-modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #description-title {
+    font-size: 35px;
+    text-align: center;
+    color: $dunkin-pink;
+    padding: 20px;
+    border-bottom: 2px solid $dunkin-orange;
+  }
+
+  #description-data {
+    font-size: 25px;
+    padding: 25px;
+    color: $dunkin-orange;
+  }
+
+  .bi-x-circle {
+    right: 0;
+    font-size: 40px;
+    color: $dunkin-pink;
+    position: absolute;
+    top: 0;
+    margin-right: 10px;
+  }
+
+  #close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+  // ------------------------------------------
+  .cool-section-divider1 {
+    width: 100%;
+    position: relative;
+    top: -13px;
+  }
+  // SEARCH BAR CONTAINER
+  #searchbar-container {
+    width: 280px;
+    height: 50px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  #search-input {
+    width: 220px;
+    height: 30px;
+    border: 2px solid #ED91AD;
+    background-color: #F7C5A7;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 5px;
+    padding-left: 10px;
+  }
+
+  #search-input::-webkit-input-placeholder {
+    color: $dunkin-orange;
+    font-size: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    color: #CA0878;
+  }
+
+  #search-button {
+    font-size: 22px;
+    margin-right: 9px;
+    color: $dunkin-orange;
+  }
+
+  #search-button:hover {
+    color: #CA0878;
+    cursor: pointer;
+  }
+  // FILTER CONTAINER
+  .content-container {
+    background: rgb(239,132,202);
+    background: radial-gradient(circle, rgba(239,132,202,1) 0%, rgba(250,212,159,1) 100%);
+  }
+
+  label {
+    display: revert;
+    color: #ED91AD;
+    font-size: 16px;
+    padding-left: 12px;
+    margin-top: 35px;
+  }
+
+  #refine-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 100px;
+    display: inline-block;
+  }
+
+  #refine-button:hover {
+    cursor: pointer;
+    color: $dunkin-orange;
+    background-color: $dunkin-pink;
+  }
+  // FLITER SECTION
+  // filter box
+
+  #filter-form {
+    width: 280px;
+    height: 100px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  // pop ups inside notifications box for filtering food
+  #notifications {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  // shop container that holds all food items
+  #shop-container {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #menu-title {
+    font-size: 30px;
+    color: #EE6B37;
+    text-shadow: 3px 2px 2px #f7c182;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .item-box1 {
+    width: 45%;
+    height: 155px;
+    background-color: #F7C8CF;
+    border: 3px solid #CA0878;
+    border-radius: 20%;
+    box-shadow: 0 6px 20px 2px rgba(203,0,110,0.52);
+    -webkit-box-shadow: 0 6px 20px 2px rgba(203,0,110,0.52);
+    -moz-box-shadow: 0 6px 20px 2px rgba(203,0,110,0.52);
+    margin: 8px 8px 20px;
+  }
+
+  .box-text {
+    color: #CA0878;
+    margin-top: 105px;
+    font-size: 13px;
+    text-align: center;
+    display: inline;
+    margin-left: -120px;
+    position: absolute;
+    width: 130px;
+  }
+
+  .donutimage {
+    width: 110px;
+    height: 110px;
+    margin-left: 15px;
+    margin-top: -1px;
+  }
+
+  .donutimage:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  #result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .alert {
+    display: inline-block;
+    margin-right: 10px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-top: 10px;
+    margin-left: 85px;
+    font-size: 8px;
+  }
+
+  .alert-type {
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 8px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .type-preface {
+    // margin-right: -15px;
+    margin-right: 5px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 8px;
+  }
+  // FOOTER
+  .footer {
+    width: 100%;
+    height: 50px;
+    background: $dunkin-orange;
+  }
+
+  .orange-section-divider {
+    width: 100%;
+    margin-top: -20px;
+  }
+
+  .footer-content-container {
+    width: 90%;
+    height: 60px;
+    color: #FAD49F;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 17px;
+    margin-top: -5px;
+  }
+
+  h4 {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  h4:hover {
+    color: $dunkin-pink;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none!important;
+    color: inherit;
+  }
+
+  // ADD A NEW ARTIST SECTION
+
+  #plus-button-div {
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .bi-patch-plus-fill {
+    color: $dunkin-pink;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+    font-size: 60px;
+  }
+
+  .bi-patch-plus-fill:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: $dunkin-yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  #newfood-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .newfood-modal-input {
+    width: 210px;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  #newfood-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #newfood-modal-content {
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #newfood-modal-content.active {
+    opacity: 1;
+  }
+
+  #newfood-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #newfood-close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+
+  .new-fooditem {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EE6B37;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .newfoodlabel {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  select {
+    color: #CA0878;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  #sumbit-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+
+// }
+
+
+// MOBILE MEDIUM MEDIA QUERY----------------------------------
+@media only screen and (min-width: 375px) {
+
+
+  .navbar-nav {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  #hero-section {
+    height: 155px;
+  }
+
+  #hero-title {
+    font-size: 20px;
+  }
+
+  #searchbar-container {
+    width: 340px;
+  }
+
+  #search-input {
+    width: 270px;
+  }
+
+  #search-button {
+    font-size: 23px;
+  }
+
+  #filter-form {
+    width: 340px;
+    height: 110px;
+  }
+
+  label {
+    font-size: 17px;
+    padding-left: 32px;
+  }
+
+  #refine-button {
+    margin-left: 118px;
+    margin-top: 5px;
+  }
+
+  .item-box1 {
+    width: 42%;
+    margin: 15px;
+  }
+
+  .donutimage {
+    margin-left: 20px;
+  }
+
+  .footer-content-container {
+    margin-left: 38px;
+  }
+
+  // ADD A NEW ARTIST SECTION
+
+  #plus-button-div {
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .bi-patch-plus-fill {
+    font-size: 60px;
+    color: $dunkin-pink;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  .bi-patch-plus-fill:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: $dunkin-yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  #newfood-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .newfood-modal-input {
+    width: 250px;
+    height: 30px;
+    margin-left: 30px;
+  }
+
+  #newfood-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #newfood-modal-content {
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #newfood-modal-content.active {
+    opacity: 1;
+  }
+
+  #newfood-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #newfood-close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+
+  .new-fooditem {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EE6B37;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .newfoodlabel {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  select {
+    color: #CA0878;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  #sumbit-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+}
+// LARGE MOBILE MEDIA QUERY----------------------------------
+@media only screen and (min-width: 425px) {
+
+  .navbar-nav {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  #hero-section {
+    height: 185px;
+  }
+
+  #hero-title {
+    font-size: 22px;
+  }
+
+  #searchbar-container {
+    width: 385px;
+  }
+
+  #search-input {
+    width: 310px;
+    margin-left: 10px;
+  }
+
+  #search-button {
+    font-size: 23px;
+  }
+
+  #filter-form {
+    width: 385px;
+    height: 120px;
+  }
+
+  label {
+    font-size: 20px;
+    padding-left: 32px;
+  }
+
+  #refine-button {
+    margin-left: 143px;
+    margin-top: 5px;
+  }
+
+  #menu-title {
+    font-size: 35px;
+  }
+
+  .item-box1 {
+    width: 40%;
+    margin: 21px;
+    height: 170px;
+  }
+
+  .box-text {
+    margin-top: 118px;
+    // margin-left: -123px;
+  }
+
+  .donutimage {
+    margin-left: 22px;
+    width: 120px;
+    height: 120px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  // ADD A NEW ARTIST SECTION
+
+  #plus-button-div {
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .bi-patch-plus-fill {
+    color: $dunkin-pink;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+    font-size: 60px;
+  }
+
+  .bi-patch-plus-fill:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: $dunkin-yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  #newfood-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .newfood-modal-input {
+    width: 250px;
+    height: 30px;
+  }
+
+  #newfood-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #newfood-modal-content {
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #newfood-modal-content.active {
+    opacity: 1;
+  }
+
+  #newfood-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #newfood-close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+
+  .new-fooditem {
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EE6B37;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .newfoodlabel {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  select {
+    color: #CA0878;
+    height: 30px;
+    font-size: 18px;
+    width: 130px;
+    padding-left: 3px;
+  }
+
+  #sumbit-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 22px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+}
+
+
+
+// TABLET MEDIA QUERY----------------------------------
+@media only screen and (min-width: 768px) {
+
+  .navbar-nav {
+    width: 100%;
+    padding-left: 220px;
+  }
+
+  #hero-section {
+    height: 310px;
+  }
+
+  #hero-title {
+    font-size: 30px;
+  }
+
+  #notifications {
+    width: 415px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 169px;
+  }
+
+  .type-preface {
+    margin-right: 5px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 10px;
+  }
+
+  .alert-type {
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 10px;
+    width: 80px;
+    text-align: center;
+  }
+
+  .alert {
+    margin-left: 130px;
+    font-size: 10px;
+  }
+
+  #searchbar-container {
+    width: 385px;
+    margin-left: 190px;
+  }
+
+  #filter-form {
+    width: 385px;
+    height: 120px;
+    margin-left: 190px;
+  }
+
+
+  #menu-title {
+    font-size: 45px;
+  }
+
+  .item-box1 {
+    width: 26%;
+    margin: 28px;
+    height: 200px;
+  }
+
+  .box-text {
+    margin-top: 148px;
+    margin-left: -168px;
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .donutimage {
+    margin-left: 27px;
+    width: 140px;
+    height: 140px;
+  }
+
+  #shop-container {
+    padding-bottom: 40px;
+  }
+
+  .footer-content-container {
+    margin-left: 195px;
+    margin-top: -30px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .orange-section-divider {
+    width: 100%;
+    margin-top: -30px;
+  }
+
+  #description-data {
+    font-size: 28px;
+    padding: 35px;
+  }
+
+  // ADD A NEW ARTIST SECTION
+
+  #plus-button-div {
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .bi-patch-plus-fill {
+    color: $dunkin-pink;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+    font-size: 60px;
+  }
+
+  .bi-patch-plus-fill:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: $dunkin-yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  #newfood-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  #newfood-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #newfood-modal-content {
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #newfood-modal-content.active {
+    opacity: 1;
+  }
+
+  #newfood-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #newfood-close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+
+  .new-fooditem {
+    font-size: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EE6B37;
+    padding-bottom: 20px;
+  }
+
+  .newfoodlabel {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  #sumbit-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+
+}
+
+// LAPTOP MEDIA QUERY----------------------------------
+@media only screen and (min-width: 1024px) {
+
+  /* NAV SECTION */
+
+  a:hover {
+    color: $dunkin-orange!important;
+  }
+
+  .bg-light {
+      background-color: #FFD49F!important;
+      opacity: 60%;
+      border-bottom: 3px solid #AD0064;
+  }
+
+  #logo {
+    width: 190px;
+    height: 100px;
+    margin-left: 15px;
+    margin-right: -210px;
+  }
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #CA0878;
+  width: 155px;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-left: -5px;
+  background-color: #FFCCE9;
+  border-radius: 8px;
+  border: 2px solid #CA0878;
+  text-align: center;
+  padding-top: 3px;
+}
+
+  #orderbutton {
+    color: #EA3D07;
+    border: 2px solid #EA3D07;
+    background-color: #FFBD6B;
+  }
+
+  .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      margin-left: 300px;
+  }
+
+  .navbar-nav {
+    border-top: 0px solid $dunkin-pink;
+  }
+
+  /* HERO SECTION */
+  #hero-section {
+    background-image: url("../img/hero-image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 435px;
+    width: 100%;
+  }
+
+  #hero-title {
+    font-size: 38px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    color: #FAE0F2;
+    text-shadow: 2px 2px 2px #da3f90;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+
+  // MODALS ---------------------
+  #description-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  #description-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #description-modal-content {
+    // opacity: 0;
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #description-modal-content.active {
+    opacity: 1;
+  }
+
+  #description-modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #description-title {
+    font-size: 55px;
+    text-align: center;
+    color: $dunkin-pink;
+    padding: 20px;
+    border-bottom: 2px solid $dunkin-orange;
+  }
+
+  #description-data {
+    font-size: 45px;
+    padding: 25px;
+    color: $dunkin-orange;
+  }
+
+  .bi-x-circle {
+    right: 0;
+    font-size: 60px;
+    color: $dunkin-pink;
+    position: absolute;
+    top: 0;
+    margin-right: 10px;
+  }
+
+  #close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+  // ------------------------------------------
+  .cool-section-divider1 {
+    width: 100%;
+    position: relative;
+    top: -13px;
+  }
+
+// SEARCH AND FILTER CONTAINER
+
+  .searchandfilterbox-conatiner {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  // SEARCH BAR CONTAINER
+  #searchbar-container {
+    width: 355px;
+    height: 65px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  #search-input {
+    width: 280px;
+    height: 30px;
+    border: 2px solid #ED91AD;
+    background-color: #F7C5A7;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 5px;
+    padding-left: 10px;
+    margin-top: 12px;
+  }
+
+  #search-input::-webkit-input-placeholder {
+    color: $dunkin-orange;
+    font-size: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    color: #CA0878;
+  }
+
+  #search-button {
+    font-size: 25px;
+    margin-right: 9px;
+    color: $dunkin-orange;
+  }
+
+  #search-button:hover {
+    color: #CA0878;
+    cursor: pointer;
+  }
+  // FILTER CONTAINER
+  .content-container {
+    background: rgb(239,132,202);
+    background: radial-gradient(circle, rgba(239,132,202,1) 0%, rgba(250,212,159,1) 100%);
+  }
+
+  label {
+    display: revert;
+    color: #ED91AD;
+    font-size: 16px;
+    padding-left: 12px;
+    margin-top: 35px;
+  }
+
+  #refine-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  #refine-button:hover {
+    cursor: pointer;
+    color: $dunkin-orange;
+    background-color: $dunkin-pink;
+  }
+  // FLITER SECTION
+  // filter box
+
+  #filter-form {
+    width: 610px;
+    height: 65px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  // pop ups inside notifications box for filtering food
+  #notifications {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1px;
+    margin-bottom: 10px;
+  }
+  // shop container that holds all food items
+  #shop-container {
+    width: 100%;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #menu-title {
+    font-size: 50px;
+    color: #EE6B37;
+    text-shadow: 3px 2px 2px #f7c182;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .item-box1 {
+    width: 30%;
+    height: 300px;
+    background-color: #F7C8CF;
+    border: 3px solid #CA0878;
+    border-radius: 20%;
+    box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    -webkit-box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    -moz-box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    margin: 17px;
+    display: inline-block;
+  }
+
+  .box-text {
+    color: #CA0878;
+    margin-top: 215px;
+    font-size: 25px;
+    text-align: center;
+    display: inline;
+    margin-left: -220px;
+    position: absolute;
+    width: 230px;
+  }
+
+  .donutimage {
+    width: 220px;
+    height: 220px;
+    margin-left: 40px;
+    margin-top: -1px;
+  }
+
+  .donutimage:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  #result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .alert {
+    display: inline-block;
+    margin-right: 10px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 380px;
+    font-size: 15px;
+  }
+
+  .type-preface {
+    margin-right: 5px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 15px;
+  }
+
+  .alert-type {
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 15px;
+    width: 110px;
+    text-align: center;
+  }
+
+
+  // FOOTER
+  .footer {
+    width: 100%;
+    height: 70px;
+    background: $dunkin-orange;
+  }
+
+  .orange-section-divider {
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  .footer-content-container {
+    width: 90%;
+    height: 60px;
+    color: #FAD49F;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 270px;
+    margin-top: -40px;
+  }
+
+  h4 {
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  h4:hover {
+    color: $dunkin-pink;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none!important;
+    color: inherit;
+  }
+
+  // ADD A NEW ARTIST SECTION
+
+  #plus-button-div {
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .bi-patch-plus-fill {
+    color: $dunkin-pink;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+    font-size: 80px;
+  }
+
+  .bi-patch-plus-fill:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: $dunkin-yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #CA0878;
+  }
+
+  #newfood-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  #newfood-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #newfood-modal-content {
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #newfood-modal-content.active {
+    opacity: 1;
+  }
+
+  #newfood-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #newfood-close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+
+  .new-fooditem {
+    font-size: 3.75rem;
+    margin-bottom: 80px;
+    border-bottom: 2px solid $dunkin-orange;
+    padding-bottom: 30px;
+  }
+
+  .newfoodlabel {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  #sumbit-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 35px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 70px;
+  }
+
+
+
+}
+
+
+// ------------------------LARGE LAPTOP MEDIA QUERY---------------------------------
+@media only screen and (min-width: 1440px) {
+
+  /* NAV SECTION */
+
+  a:hover {
+    color: $dunkin-orange!important;
+  }
+
+  .bg-light {
+      background-color: #FFD49F!important;
+      opacity: 60%;
+      border-bottom: 3px solid #AD0064;
+  }
+
+  #logo {
+    width: 190px;
+    height: 100px;
+    margin-left: 15px;
+    margin-right: -50px;
+  }
+
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #CA0878;
+    width: 185px;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-left: 30px;
+    background-color: #FFCCE9;
+    border-radius: 8px;
+    border: 2px solid #CA0878;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  #orderbutton {
+    color: #EA3D07;
+    border: 2px solid #EA3D07;
+    background-color: #FFBD6B;
+  }
+
+  .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      margin-left: 300px;
+  }
+
+  .navbar-nav {
+    border-top: 0px solid $dunkin-pink;
+  }
+
+  /* HERO SECTION */
+  #hero-section {
+    background-image: url("../img/hero-image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 585px;
+    width: 100%;
+  }
+
+  #hero-title {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    color: #FAE0F2;
+    text-shadow: 2px 2px 2px #da3f90;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+
+
+  // MODALS ---------------------
+  #description-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000bf;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  #description-modal-content {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+
+  #description-modal-content {
+    // opacity: 0;
+    color: $dunkin-pink;
+    text-align: center;
+    opacity: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  #description-modal-content.active {
+    opacity: 1;
+  }
+
+  #description-modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #description-title {
+    font-size: 65px;
+    text-align: center;
+    color: $dunkin-pink;
+    padding: 20px;
+    border-bottom: 2px solid $dunkin-orange;
+  }
+
+  #description-data {
+    font-size: 55px;
+    padding: 25px;
+    color: $dunkin-orange;
+  }
+
+  .bi-x-circle {
+    right: 0;
+    font-size: 60px;
+    color: $dunkin-pink;
+    position: absolute;
+    top: 0;
+    margin-right: 10px;
+  }
+
+  #close-button:hover {
+    color: $dunkin-orange;
+    cursor: pointer;
+  }
+  // ------------------------------------------
+  .cool-section-divider1 {
+    width: 100%;
+    position: relative;
+    top: -13px;
+  }
+
+  // SEARCH AND FILTER CONTAINER
+
+  .searchandfilterbox-conatiner {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 70px;
+  }
+
+  // SEARCH BAR CONTAINER
+  #searchbar-container {
+    width: 455px;
+    height: 75px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  #search-input {
+    width: 370px;
+    height: 45px;
+    border: 2px solid #ED91AD;
+    background-color: #F7C5A7;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 12px;
+    padding-left: 10px;
+    margin-top: 12px;
+  }
+
+  #search-input::-webkit-input-placeholder {
+    color: $dunkin-orange;
+    font-size: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    color: #CA0878;
+  }
+
+  #search-button {
+    font-size: 30px;
+    margin-right: 12px;
+    color: $dunkin-orange;
+  }
+
+  #search-button:hover {
+    color: #CA0878;
+    cursor: pointer;
+  }
+  // FILTER CONTAINER
+  .content-container {
+    background: rgb(239,132,202);
+    background: radial-gradient(circle, rgba(239,132,202,1) 0%, rgba(250,212,159,1) 100%);
+  }
+
+  label {
+    display: revert;
+    color: #ED91AD;
+    font-size: 23px;
+    padding-left: 12px;
+    margin-top: 35px;
+  }
+
+  #refine-button {
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    background-color: #FFBD6B;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  #refine-button:hover {
+    cursor: pointer;
+    color: $dunkin-orange;
+    background-color: $dunkin-pink;
+  }
+  // FLITER SECTION
+  // filter box
+
+  #filter-form {
+    width: 780px;
+    height: 75px;
+    border: 4px solid #ED91AD;
+    padding: -20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  // pop ups inside notifications box for filtering food
+  #notifications {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+  }
+  // shop container that holds all food items
+  #shop-container {
+    width: 100%;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #menu-title {
+    font-size: 60px;
+    color: #EE6B37;
+    text-shadow: 3px 2px 2px #f7c182;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .item-box1 {
+    width: 25%;
+    height: 350px;
+    background-color: #F7C8CF;
+    border: 3px solid #CA0878;
+    border-radius: 20%;
+    box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    -webkit-box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    -moz-box-shadow: 0px 6px 20px 2px rgba(203,0,110,0.52);
+    margin: 60px;
+    display: inline-block;
+  }
+
+  .box-text {
+    color: #CA0878;
+    margin-top: 265px;
+    font-size: 25px;
+    text-align: center;
+    display: inline;
+    margin-left: -295px;
+    position: absolute;
+    width: 350px;
+  }
+
+  .donutimage {
+    width: 250px;
+    height: 250px;
+    margin-left: 50px;
+    margin-top: -1px;
+  }
+
+  .donutimage:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  #result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .alert {
+    display: inline-block;
+    margin-right: 10px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 490px;
+    font-size: 20px;
+  }
+
+  .type-preface {
+    margin-right: 5px;
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 20px;
+  }
+
+  .alert-type {
+    background: #FFBD6B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EE6B37;
+    border: 2px solid #EE6B37;
+    margin-left: 22px;
+    font-size: 20px;
+    width: 140px;
+    text-align: center;
+  }
+
+
+  // FOOTER
+  .footer {
+    width: 100%;
+    height: 90px;
+    background: $dunkin-orange;
+  }
+
+  .orange-section-divider {
+    width: 100%;
+    margin-top: -55px;
+  }
+
+  .footer-content-container {
+    width: 90%;
+    height: 60px;
+    color: #FAD49F;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 330px;
+    margin-top: -60px;
+  }
+
+  h4 {
+    font-size: 35px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  h4:hover {
+    color: $dunkin-pink;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none!important;
+    color: inherit;
+  }
+
+// ADD A NEW ARTIST SECTION
+
+#plus-button-div {
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+}
+
+.bi-patch-plus-fill {
+  color: $dunkin-pink;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #CA0878;
+  font-size: 80px;
+}
+
+.bi-patch-plus-fill:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: $dunkin-yellow;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #CA0878;
+}
+
+#newfood-modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000bf;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+#newfood-modal-content {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+#newfood-modal-content {
+  color: $dunkin-pink;
+  text-align: center;
+  opacity: 100;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+#newfood-modal-content.active {
+  opacity: 1;
+}
+
+#newfood-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#newfood-close-button:hover {
+  color: $dunkin-orange;
+  cursor: pointer;
+}
+
+.new-fooditem {
+  font-size: 3.75rem;
+  margin-bottom: 80px;
+  border-bottom: 2px solid $dunkin-orange;
+  padding-bottom: 30px;
+}
+
+.newfoodlabel {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+#sumbit-button {
+  color: #EE6B37;
+  border: 2px solid #EE6B37;
+  background-color: #FFBD6B;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 35px;
+  text-decoration: none;
+  margin-left: 15px;
+  display: inline-block;
+  margin-top: 70px;
+}
+
+}
