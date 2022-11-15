@@ -23,7 +23,7 @@ $dunkin-yellow: #FAD49F;
 
 
 // SMALL MOBILE MEDIA QUERY----------------------------------
-// @media only screen and (max-width: 768px) {
+
 
 
 a:hover {
@@ -179,7 +179,8 @@ a:hover {
   border: 4px solid #ED91AD;
   padding: -20px;
   border-radius: 15px;
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
 }
 
@@ -258,7 +259,8 @@ label {
   border: 4px solid #ED91AD;
   padding: -20px;
   border-radius: 15px;
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
 }
 
@@ -378,14 +380,18 @@ label {
 }
 
 .footer-content-container {
-  width: 90%;
+  width: 100vw;
   height: 60px;
   color: #FAD49F;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 17px;
   margin-top: -5px;
+}
+
+.footer-text {
+  width: 100%;
+  text-align: center;
 }
 
 h4 {
@@ -565,9 +571,7 @@ select {
     margin-left: 20px;
   }
 
-  .footer-content-container {
-    margin-left: 38px;
-  }
+
 
   // ADD A NEW ARTIST SECTION
 
@@ -683,6 +687,21 @@ select {
     padding-left: 60px;
   }
 
+  .navbar-light .navbar-nav .nav-link {
+    color: #CA0878;
+    width: 50%;
+    height: 45px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-right: 30%;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
   #hero-section {
     height: 185px;
   }
@@ -730,12 +749,13 @@ select {
   }
 
   .box-text {
-    margin-top: 118px;
-    // margin-left: -123px;
+    margin-left: -125px;
+    width: 30%;
+    margin-top: 120px;
   }
 
   .donutimage {
-    margin-left: 22px;
+    margin-left: 14%;
     width: 120px;
     height: 120px;
   }
@@ -744,7 +764,7 @@ select {
     font-size: 16px;
   }
 
-  // ADD A NEW ARTIST SECTION
+  // ADD A NEW DONUT SECTION
 
   #plus-button-div {
     bottom: 20px;
@@ -861,6 +881,21 @@ select {
     padding-left: 220px;
   }
 
+  .navbar-light .navbar-nav .nav-link {
+    color: #CA0878;
+    width: 50%;
+    height: 45px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 10%;
+    margin-right: 30%;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
   #hero-section {
     height: 310px;
   }
@@ -944,7 +979,6 @@ select {
   }
 
   .footer-content-container {
-    margin-left: 195px;
     margin-top: -30px;
   }
 
@@ -1061,6 +1095,11 @@ select {
 
   /* NAV SECTION */
 
+  .navbar-nav {
+    width: 0%;
+    height: 0%;
+  }
+
   a:hover {
     color: $dunkin-orange  !important;
   }
@@ -1085,7 +1124,7 @@ select {
     height: 50px;
     text-transform: uppercase;
     font-size: 26px;
-    margin-left: -5px;
+    margin-left: 45px;
     background-color: #FFCCE9;
     border-radius: 8px;
     border: 2px solid #CA0878;
@@ -1427,26 +1466,19 @@ select {
   }
 
   .footer-content-container {
-    width: 90%;
+    width: 100%;
     height: 60px;
     color: #FAD49F;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 270px;
     margin-top: -40px;
   }
 
-  h4 {
-    font-size: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+  .footer-text {
+    font-size: 22px;
   }
 
-  h4:hover {
-    color: $dunkin-pink;
-    cursor: pointer;
-  }
 
   a {
     text-decoration: none !important;
@@ -1578,7 +1610,7 @@ select {
     height: 60px;
     text-transform: uppercase;
     font-size: 30px;
-    margin-left: 30px;
+    margin-left: 90px;
     background-color: #FFCCE9;
     border-radius: 8px;
     border: 2px solid #CA0878;
@@ -1921,25 +1953,17 @@ select {
   }
 
   .footer-content-container {
-    width: 90%;
+    width: 100%;
     height: 60px;
     color: #FAD49F;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 330px;
     margin-top: -60px;
   }
 
-  h4 {
-    font-size: 35px;
-    margin-left: 35px;
-    margin-right: 35px;
-  }
-
-  h4:hover {
-    color: $dunkin-pink;
-    cursor: pointer;
+  .footer-text {
+    font-size: 27px;
   }
 
   a {
